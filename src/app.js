@@ -45,8 +45,9 @@ App = {
         web3.eth.defaultAccount = web3.eth.accounts[0];
         
         App.account = web3.eth.defaultAccount;
-       // console.log(web3.eth.defaultAccount);
-
+        
+       console.log(web3.eth.defaultAccount);
+       
       },
     
       loadContract: async () => {
@@ -64,7 +65,8 @@ App = {
         //console.log(`TODO List ${JSON.stringify(App.todoList)}`)
       },
       render : async ()=> {
-        $("account").html(App.account);
+          
+        document.getElementById("account").innerHTML =  App.account
       }
     
 }
